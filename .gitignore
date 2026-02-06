@@ -3,9 +3,13 @@
 *.iml
 .packages
 .pub/
+.flutter-plugins-dependencies
 
 build/
 .worktrees/
 ios/.generated/
 ios/Flutter/Generated.xcconfig
 ios/Runner/GeneratedPluginRegistrant.*
+example/.flutter-plugins-dependencies
+example/ios/Flutter/ephemeral/
+example/ios/Podfile
