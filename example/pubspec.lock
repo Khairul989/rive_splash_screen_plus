@@ -208,13 +208,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.1.2"
-  rive_splash_screen:
+  rive_splash_screen_plus:
     dependency: "direct main"
     description:
       path: ".."
       relative: true
     source: path
-    version: "0.1.1"
+    version: "0.2.0"
   sky_engine:
     dependency: transitive
     description: flutter

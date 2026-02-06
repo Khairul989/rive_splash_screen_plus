@@ -1,25 +1,56 @@
-# rive_splash_screen
+# rive_splash_screen_plus
 
-[![pub package](https://img.shields.io/pub/v/rive_splash_screen.svg)](https://pub.dartlang.org/packages/rive_splash_screen)
+[![pub package](https://img.shields.io/pub/v/rive_splash_screen_plus.svg)](https://pub.dev/packages/rive_splash_screen_plus)
+
+Repository: https://github.com/Khairul989/rive_splash_screen_plus
 
 Facilitator for having a Splash screen with a Rive animation until some work has been done for the initialization of the app
 
 ## Compatibility
 
-- Flutter: 3.0.0+ (tested on 3.35.7 and latest stable)
-- Dart: 3.0.0+
-- Rive: uses `rive_loading_plus` (modern Rive 0.14.x)
+- Flutter: 3.28.0+ (tested on 3.35.7 and latest stable)
+- Dart: 3.5.0+
+- Rive: uses `rive_loading_plus` (Rive 0.14.x)
 
 ## Android 15 16KB Page Size Support
 
 This package ships no native code, but your app may include native libraries via Flutter/Rive.
-Use the included checker to validate your release APK:
+Build a release APK first, then run the included checker:
 
 ```bash
+flutter build apk --release
 ./check_elf_alignment.sh example/build/app/outputs/flutter-apk/app-release.apk
 ```
 
-## Usage
+## Migration
+
+Update your dependency and import to the new package name.
+
+Before:
+
+```yaml
+dependencies:
+  rive_splash_screen: ^0.2.0
+```
+
+After:
+
+```yaml
+dependencies:
+  rive_splash_screen_plus: ^0.2.0
+```
+
+Before:
+
+```dart
+import 'package:rive_splash_screen/rive_splash_screen.dart';
+```
+
+After:
+
+```dart
+import 'package:rive_splash_screen_plus/rive_splash_screen_plus.dart';
+```
 
 ### Navigation
 

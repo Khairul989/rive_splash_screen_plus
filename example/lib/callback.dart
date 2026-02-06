@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rive_splash_screen/rive_splash_screen.dart';
+import 'package:rive_splash_screen_plus/rive_splash_screen_plus.dart';
 
 void main() => runApp(const MyApp());
 
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       ),
       home: Builder(
         builder: (context) => SplashScreen.callback(
-          name: 'intro.flr',
+          name: 'intro.riv',
           onSuccess: (_) {
             Navigator.of(context).pushReplacement(
               PageRouteBuilder(

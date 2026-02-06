@@ -1,11 +1,11 @@
-name: rive_splash_screen
+name: rive_splash_screen_plus
 description: Facilitator for having a Splash screen with a Rive animation until some work has been done for the initialization of the app
-version: 0.1.1
-homepage: https://github.com/jaumard/rive_splash_screen
+version: 0.2.0
+homepage: https://github.com/Khairul989/rive_splash_screen_plus
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
-  flutter: ">=3.0.0"
+  sdk: '>=3.5.0 <4.0.0'
+  flutter: ">=3.28.0"
 
 dependencies:
   rive_loading_plus: ^0.1.3

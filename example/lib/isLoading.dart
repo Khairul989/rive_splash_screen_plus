@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rive_splash_screen/rive_splash_screen.dart';
+import 'package:rive_splash_screen_plus/rive_splash_screen_plus.dart';
 
 void main() => runApp(const MyApp());
 
@@ -43,7 +43,7 @@ class _MySplashScreenState extends State<MySplashScreen> {
   @override
   Widget build(BuildContext context) {
     return SplashScreen.navigate(
-      name: 'intro.flr',
+      name: 'intro.riv',
       next: (context) => const MyHomePage(title: 'Flutter Demo Home Page'),
       startAnimation: '1',
       loopAnimation: '1',

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rive_splash_screen/rive_splash_screen.dart';
+import 'package:rive_splash_screen_plus/rive_splash_screen_plus.dart';
 
 void main() => runApp(const MyApp());
 
