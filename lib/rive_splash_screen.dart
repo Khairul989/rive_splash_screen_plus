@@ -1,7 +1,7 @@
 library rive_splash_screen;
 
 import 'package:flutter/material.dart';
-import 'package:rive_loading/rive_loading.dart';
+import 'package:rive_loading_plus/rive_loading_plus.dart';
 
 class SplashScreen extends StatelessWidget {
   final String name;
@@ -108,8 +108,10 @@ class SplashScreen extends StatelessWidget {
     this.onSuccess,
     this.onError,
     this.fit,
-  })  : assert(!(isLoading != null && until != null), 'isLoading and until are exclusive, pick one ;)'),
-        assert(!(isLoading == null && until == null), 'isLoading and until are null, pick one ;)'),
+  })  : assert(!(isLoading != null && until != null),
+            'isLoading and until are exclusive, pick one ;)'),
+        assert(!(isLoading == null && until == null),
+            'isLoading and until are null, pick one ;)'),
         super(key: key);
 
   @override

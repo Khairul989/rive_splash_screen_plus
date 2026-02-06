@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:rive_splash_screen/rive_splash_screen.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,14 +13,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MySplashScreen(),
+      home: const MySplashScreen(),
     );
   }
 }
 
 class MySplashScreen extends StatefulWidget {
+  const MySplashScreen({super.key});
+
   @override
-  _MySplashScreenState createState() => _MySplashScreenState();
+  State<MySplashScreen> createState() => _MySplashScreenState();
 }
 
 class _MySplashScreenState extends State<MySplashScreen> {
@@ -27,17 +30,21 @@ class _MySplashScreenState extends State<MySplashScreen> {
 
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 5)).then((_) => setState(() {
-          _isLoading = false;
-        }));
     super.initState();
+    Future.delayed(const Duration(seconds: 5)).then((_) {
+      if (mounted) {
+        setState(() {
+          _isLoading = false;
+        });
+      }
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return SplashScreen.navigate(
       name: 'intro.flr',
-      next: (context) => MyHomePage(title: 'Flutter Demo Home Page'),
+      next: (context) => const MyHomePage(title: 'Flutter Demo Home Page'),
       startAnimation: '1',
       loopAnimation: '1',
       isLoading: _isLoading,
@@ -47,11 +54,12 @@ class _MySplashScreenState extends State<MySplashScreen> {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  const MyHomePage({super.key, required this.title});
+
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
@@ -73,12 +81,12 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
+            const Text(
               'You have pushed the button this many times:',
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.subtitle1,
+              style: Theme.of(context).textTheme.titleMedium,
             ),
           ],
         ),
@@ -86,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }

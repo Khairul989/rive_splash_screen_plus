@@ -4,6 +4,21 @@
 
 Facilitator for having a Splash screen with a Rive animation until some work has been done for the initialization of the app
 
+## Compatibility
+
+- Flutter: 3.0.0+ (tested on 3.35.7 and latest stable)
+- Dart: 3.0.0+
+- Rive: uses `rive_loading_plus` (modern Rive 0.14.x)
+
+## Android 15 16KB Page Size Support
+
+This package ships no native code, but your app may include native libraries via Flutter/Rive.
+Use the included checker to validate your release APK:
+
+```bash
+./check_elf_alignment.sh example/build/app/outputs/flutter-apk/app-release.apk
+```
+
 ## Usage
 
 ### Navigation

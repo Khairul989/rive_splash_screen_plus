@@ -4,12 +4,12 @@ version: 0.1.1
 homepage: https://github.com/jaumard/rive_splash_screen
 
 environment:
-  sdk: '>=2.17.0 <3.0.0'
+  sdk: '>=3.0.0 <4.0.0'
   flutter: ">=3.0.0"
 
 dependencies:
-  rive_loading: ">=0.1.3 <1.0.0"
-    #path: '../rive_loading'
+  rive_loading_plus: ^0.1.3
+    #path: '../rive_loading_plus'
   flutter:
     sdk: flutter
 
