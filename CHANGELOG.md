@@ -1,3 +1,8 @@
+## 0.2.1 - 2026-02-06
+
+- Remove FittedBox usage to avoid infinite constraints in Rive 0.14.x
+- Use internal Rive loader (no rive_loading_plus dependency)
+
 ## 0.2.0 - 2026-02-06
 
 - Package renamed to rive_splash_screen_plus

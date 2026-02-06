@@ -1,7 +1,7 @@
 library rive_splash_screen;
 
 import 'package:flutter/material.dart';
-import 'package:rive_loading_plus/rive_loading_plus.dart';
+import 'package:rive_splash_screen_plus/src/rive_loading.dart';
 
 class SplashScreen extends StatelessWidget {
   final String name;
